@@ -1,0 +1,84 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    max-width: 1366px;
+    margin: 0 auto;
+}
+
+.header {
+    background: #3F51B5;
+    padding: 2vw 0;
+    color: #fff;
+}
+
+.header h1 {
+    text-transform: uppercase;
+}
+h2{
+    color:#3F51B5;
+}
+.main {
+    padding-top: 2vw;
+}
+
+.pagination {
+    padding-left: 20px;
+    display: block;
+    width: 100%;
+    clear: both;
+}
+
+.pagination > div {
+    display: inline-block;
+    width: auto;
+    float: left;
+    margin-top: 20px;
+    margin-right: 10px;
+    cursor: pointer;
+    padding: 1px 0;
+}
+
+.pagination input {
+    width: 50px;
+    border: 1px solid #000;
+    text-align: center;
+    margin-right: 5px;
+    border-radius: 0;
+}
+
+.pagination .arrow {
+    border: 1px solid #000;
+    padding: 1px 4px;
+}
+.option{
+ width:200px;
+ float:left;
+}
+footer, .options{
+ width:100%;
+ clear:both;
+ display: block;
+    overflow: hidden;
+}
+footer{
+ padding-top:2vw;
+}
+
+
+/*Validator */
+.form{
+    width:33%;float:left;
+    
+}
+
+.form-wrapper{
+    width:50%;
+    float:left;
+}
