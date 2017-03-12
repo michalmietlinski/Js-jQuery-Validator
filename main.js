@@ -56,8 +56,15 @@ validateOne : function(input, form) {
 
     //Validation required
     if (!input.val()) {
+
         input.addClass("invalid-required")
         form.addClass("invalid")
+        if(input.data("vd-invalid-message")){
+            input.after("<div class='error-required error'>"+input.data("vd-invalid-message")+"</div>")
+        }else if(form.data("vd-invalid-message")&&input.data("vd-invalid-message")!="none"){
+            input.after("<div class='error-required error'>"+form.data("vd-invalid-message")+"</div>")
+        }
+        
         return false
     }else{
          input.removeClass("invalid-required")
@@ -66,14 +73,14 @@ validateOne : function(input, form) {
     //Validation Pattern
     if(input.data("pattern")){
     }
-
+    $(input).next(".error").remove()
     //If valid check if any other is invalid or remove form class
     Validator.fomrIfAllValid(form) 
     return true
 }
 }
 formaction=function(){
- alert("!")
+    console.log("fdfddf")
 }
 
 (function() {
