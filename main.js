@@ -253,9 +253,9 @@ var JsValidator = {
     validateAll: function(form) {
         var temp = true;
        var inputs= form.getElementsByClassName("observed")
-       console.log(inputs.length)
+       // console.log(inputs.length)
         for(var i=0;i<inputs.length;i++){
-            console.log(JsValidator.validateOne(inputs[i], form))
+            // console.log(JsValidator.validateOne(inputs[i], form))
             if (!JsValidator.validateOne(inputs[i], form)) {
                 temp = false;
             }
@@ -305,7 +305,7 @@ var JsValidator = {
         }
         //Validate by compare
         if (input.getAttribute("data-vd-compare-to")) {
-            console.log(document.getElementById(input.getAttribute("data-vd-compare-to")))
+            // console.log(document.getElementById(input.getAttribute("data-vd-compare-to")))
             if (input.value != document.getElementById(input.getAttribute("data-vd-compare-to")).value) {
                 JsValidator.addClass(input,"invalid-compare")
                 JsValidator.addClass(form,"invalid")
@@ -404,7 +404,9 @@ var JsValidator = {
                 return false
             } 
         }
-        $(input).next(".error").remove()
+        if(input.nextSibling.classList&&input.nextSibling.classList[0].indexOf("error")!=-1){
+        input.nextSibling.remove();
+       }
             //If valid check if any other is invalid or remove form class
         JsValidator.fomrIfAllValid(form)
         return true
@@ -425,7 +427,7 @@ var JsValidator = {
     var forms=document.getElementsByTagName("form");
     for(var i =0; i<forms.length;i++){
         var element=forms[i]
-        console.log(element.getAttribute("data-jsvalidator"))
+        // console.log(element.getAttribute("data-jsvalidator"))
         if (element.getAttribute("data-jsvalidator")) {
         
         JsValidator.launchFormValidation(element)
