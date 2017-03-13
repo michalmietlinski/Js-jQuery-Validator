@@ -93,7 +93,7 @@ var Validator = {
             }
         }
         if (input.data("vd-min-length")) {
-            if (input.val().length < input.data("vd-min-length") {
+            if (input.val().length < input.data("vd-min-length")) {
                 input.addClass("invalid-min-length")
                 form.addClass("invalid")
                 
@@ -108,7 +108,7 @@ var Validator = {
             }
         }
         if (input.data("vd-max-length")) {
-            if (input.val().length > input.data("vd-max-length") {
+            if (input.val().length > input.data("vd-max-length")) {
                 input.addClass("invalid-max-length")
                 form.addClass("invalid")
                 
@@ -123,7 +123,7 @@ var Validator = {
             }
         }
         if (input.data("vd-min-val")) {
-            if (input.val() < input.data("vd-min-val") {
+            if (input.val() < input.data("vd-min-val")) {
                 input.addClass("invalid-min-val")
                 form.addClass("invalid")
                 
@@ -138,7 +138,7 @@ var Validator = {
             }
         }
         if (input.data("vd-max-val")) {
-            if (input.val() < input.data("vd-max-val") {
+            if (input.val() < input.data("vd-max-val")) {
                 input.addClass("invalid-max-val")
                 form.addClass("invalid")
                 
