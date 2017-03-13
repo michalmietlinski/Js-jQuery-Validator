@@ -16,7 +16,8 @@
         <h2>Validator - in progress</h2>
         <div class="form-wrapper">
           <div class="form">
-            <form  id="first-form" novalidate name="first-form" data-validator="true" onsubmit="Validator.formaction()" data-vd-invalid-message="Required for all">
+            <h2>JQuery Validator</h2>
+            <form  id="first-form" novalidate name="first-form" data-validator="true" onsubmit="jQValidator.formaction()" data-vd-invalid-message="Required for all">
               <h3>Pattern email and required</h3>
               <input type="text" name="first"  required data-vd-pattern-message="Pattern bitch" data-vd-pattern="email">
               <h3>Only required</h3>
@@ -29,10 +30,18 @@
         </div>
         <div class="form-wrapper">
           <div class="form">
-            <form  id="first-form" novalidate name="first-form" data-validator="true" onsubmit="Validator.formaction()" >
-              <input type="text" name="first" ng-model="first" required data-vd-invalid-message="Required k#$#@">
+            <h2>JS only Validator</h2>
+             <form  id="second-form" novalidate name="first-form" data-jsvalidator="true" onsubmit="JsValidator.formaction()" data-vd-invalid-message="Required for all">
+              <h3>Pattern email and required</h3>
+              <input type="text" name="first"  required data-vd-pattern-message="Pattern bitch" data-vd-pattern="email">
+              <h3>Only required</h3>
+              <input type="text" id="seconds" name="second" required>
+              <h3>Required with custom message and compare to second one</h3>
+              <input type="text" name="third" required data-vd-compare-message="Must be this same" data-vd-compare-to="seconds" data-vd-invalid-message="Required for only one field">
               <input type="submit" value="Submit"> </input>
             </form>
+          </div>
+        </div>
           </div>
         </div>
       </section>
