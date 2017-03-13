@@ -17,11 +17,11 @@
    <h2>Validator - in progress</h2>
    <div class="form-wrapper">
     <div class="form">
-    <form  id="first-form" name="first-form" data-validator="true" onsubmit="formaction()" data-vd-invalid-message="Required ogólny">
-     <input type="text" name="first"  required>
+    <form  id="first-form" novalidate name="first-form" data-validator="true" onsubmit="formaction()" data-vd-invalid-message="Required ogólny">
+     <input type="text" name="first"  required data-vd-pattern-message="Pattern bitch" data-vd-pattern="email">
 
-     <input type="text" name="second" required>
-     <input type="text" name="third" required data-vd-invalid-message="Required szczegółowy">
+     <input type="text" id="second" name="second" required>
+     <input type="text" name="third" required data-vd-compare-message="Must be this same" data-vd-compare-to="#second" data-vd-invalid-message="Required szczegółowy">
      <input type="submit" value="Submit"> </input>
 
    </form>
