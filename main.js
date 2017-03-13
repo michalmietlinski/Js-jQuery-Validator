@@ -92,11 +92,76 @@ var Validator = {
                 input.removeClass("invalid-compare")
             }
         }
+        if (input.data("vd-min-length")) {
+            if (input.val().length < input.data("vd-min-length") {
+                input.addClass("invalid-min-length")
+                form.addClass("invalid")
+                
+                if (input.data("vd-length-message")) {
+                    input.after("<div class='error-required error'>" + input.data("vd-length-message") + "</div>")
+                } else if (form.data("vd-length-message") && input.data("vd-length-message") != "none") {
+                    input.after("<div class='error-required error'>" + form.data("vd-length-message") + "</div>")
+                }
+                return false
+            } else {
+                input.removeClass("invalid-min-length")
+            }
+        }
+        if (input.data("vd-max-length")) {
+            if (input.val().length > input.data("vd-max-length") {
+                input.addClass("invalid-max-length")
+                form.addClass("invalid")
+                
+                if (input.data("vd-length-message")) {
+                    input.after("<div class='error-required error'>" + input.data("vd-length-message") + "</div>")
+                } else if (form.data("vd-length-message") && input.data("vd-length-message") != "none") {
+                    input.after("<div class='error-required error'>" + form.data("vd-length-message") + "</div>")
+                }
+                return false
+            } else {
+                input.removeClass("invalid-max-length")
+            }
+        }
+        if (input.data("vd-min-val")) {
+            if (input.val() < input.data("vd-min-val") {
+                input.addClass("invalid-min-val")
+                form.addClass("invalid")
+                
+                if (input.data("vd-value-message")) {
+                    input.after("<div class='error-required error'>" + input.data("vd-value-message") + "</div>")
+                } else if (form.data("vd-value-message") && input.data("vd-value-message") != "none") {
+                    input.after("<div class='error-required error'>" + form.data("vd-value-message") + "</div>")
+                }
+                return false
+            } else {
+                input.removeClass("invalid-value-length")
+            }
+        }
+        if (input.data("vd-max-val")) {
+            if (input.val() < input.data("vd-max-val") {
+                input.addClass("invalid-max-val")
+                form.addClass("invalid")
+                
+                if (input.data("vd-value-message")) {
+                    input.after("<div class='error-required error'>" + input.data("vd-value-message") + "</div>")
+                } else if (form.data("vd-value-message") && input.data("vd-value-message") != "none") {
+                    input.after("<div class='error-required error'>" + form.data("vd-value-message") + "</div>")
+                }
+                return false
+            } else {
+                input.removeClass("invalid-value-length")
+            }
+        }
         //Validation Pattern
         if (input.data("vd-pattern")) {
             if(input.data("vd-pattern")=="email"){
                 var patt = new RegExp(Validator.patterns.email);
-                console.log(patt)
+            }
+            if(input.data("vd-pattern")=="url"){
+                var patt = new RegExp(Validator.patterns.url);
+            }
+            if(input.data("vd-pattern")=="password"){
+                var patt = new RegExp(Validator.patterns.password);
             }
         
                 var res = patt.test(input.val());
@@ -115,13 +180,14 @@ var Validator = {
             //If valid check if any other is invalid or remove form class
         Validator.fomrIfAllValid(form)
         return true
+    },
+    formaction : function() {
+
+        console.log("fdfddf")
+        
     }
-}
-formaction = function() {
-    if($(this).hasClass("dirty")){
-    console.log("fdfddf")
-    }
-}
+};
+
 
 (function() {
     $("form").each(function() {

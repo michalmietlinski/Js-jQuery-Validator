@@ -26,6 +26,9 @@ h2{
 }
 .main {
     padding-top: 2vw;
+    overflow:hidden;
+    width:100%;
+    clear:both;
 }
 
 .pagination {
