@@ -1,9 +1,9 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
   <head>
     <title>Simple JS validator</title>
     <link rel="stylesheet" type="text/css" href="style.css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
   </head>
   <body>
     <section class="header">
@@ -19,7 +19,7 @@
             <h2>JQuery Validator</h2>
             <form  id="first-form" novalidate name="first-form" data-validator="true" onsubmit="jQValidator.formaction()" data-vd-invalid-message="Required for all">
               <h3>Pattern email and required</h3>
-              <input type="text" name="first"  required data-vd-pattern-message="Pattern bitch" data-vd-pattern="email">
+              <input type="text" name="first"  required data-vd-pattern-message="Pattern not match" data-vd-pattern="email">
               <h3>Only required</h3>
               <input type="text" id="second" name="second" required>
               <h3>Required with custom message and compare to second one</h3>
@@ -33,7 +33,7 @@
             <h2>JS only Validator</h2>
              <form  id="second-form" novalidate name="first-form" data-jsvalidator="true" onsubmit="JsValidator.formaction()" data-vd-invalid-message="Required for all">
               <h3>Pattern email and required</h3>
-              <input type="text" name="first"  required data-vd-pattern-message="Pattern bitch" data-vd-pattern="email">
+              <input type="text" name="first"  required data-vd-pattern-message="Pattern not match" data-vd-pattern="email">
               <h3>Only required</h3>
               <input type="text" id="seconds" name="second" required>
               <h3>Required with custom message and compare to second one</h3>
