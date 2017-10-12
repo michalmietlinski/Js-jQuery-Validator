@@ -17,13 +17,16 @@
         <div class="form-wrapper">
           <div class="form">
             <h2>JQuery Validator</h2>
-            <form  id="first-form" novalidate name="first-form" data-validator="true" onsubmit="jQValidator.formaction()" data-vd-invalid-message="Required for all">
+            <form  id="first-form" novalidate name="first-form" data-validator="true" onsubmit="jQValidator.formaction(event)" data-vd-invalid-message="Required for all">
               <h3>Pattern email and required</h3>
               <input type="text" name="first"  required data-vd-pattern-message="Pattern not match" data-vd-pattern="email">
               <h3>Only required</h3>
               <input type="text" id="second" name="second" required>
               <h3>Required with custom message and compare to second one</h3>
               <input type="text" name="third" required data-vd-compare-message="Must be this same" data-vd-compare-to="#second" data-vd-invalid-message="Required for only one field">
+              
+              <h3>Length</h3>
+              <input type="text" name="fourth"  required data-vd-min-length="4" data-vd-length-message="Not long enough">
               <input type="submit" value="Submit"> </input>
             </form>
           </div>
@@ -38,6 +41,9 @@
               <input type="text" id="seconds" name="second" required>
               <h3>Required with custom message and compare to second one</h3>
               <input type="text" name="third" required data-vd-compare-message="Must be this same" data-vd-compare-to="seconds" data-vd-invalid-message="Required for only one field">
+
+              <h3>Length</h3>
+              <input type="text" name="fourth"  required data-vd-min-length="4" data-vd-length-message="Not long enough">
               <input type="submit" value="Submit"> </input>
             </form>
           </div>

@@ -181,9 +181,9 @@ var jQValidator = {
         jQValidator.fomrIfAllValid(form)
         return true
     },
-    formaction : function() {
-
-        console.log("fdfddf")
+    formaction : function(e) {
+        e.preventDefault();
+        alert("passed")
         
     }
 };
@@ -411,9 +411,9 @@ var JsValidator = {
         JsValidator.fomrIfAllValid(form)
         return true
     },
-    formaction : function() {
-
-        console.log("fdfddf")
+    formaction : function(e) {
+        e.preventDefault();
+        alert("passed")
         
     }
 };
